@@ -1,0 +1,17 @@
+#+TITLE: tos.el --- Tabs Or Spaces?
+
+* Installation
+** use-package
+   #+begin_src elisp
+     (use-package tos
+       :ensure nil
+       :quelpa
+       (tos :repo "pkulev/tos.el"
+            :fetcher github :upgrade t))
+   #+end_src
+
+* Examples
+** language-specific hooks
+   #+begin_src elisp
+
+   #+end_src
