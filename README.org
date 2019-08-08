@@ -13,5 +13,16 @@
 * Examples
 ** language-specific hooks
    #+begin_src elisp
+     (defun python-indentation-hook ()
+       "Sets proper values depending on buffer indentation mode."
+       (if (tos-buffer-tabs?)
+           (setq indent-tabs-mode t
+                 tab-width 4)
+         (setq indent-tabs-mode nil
+               tab-width 4)))
 
+     (use-package python-mode
+       :ensure nil
+       :hook
+       (python-mode . python-indentation-hook))
    #+end_src
